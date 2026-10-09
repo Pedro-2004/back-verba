@@ -1,10 +1,14 @@
 {
-  "editor.quickSuggestions": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
   "editor.suggestOnTriggerCharacters": false,
   "editor.inlineSuggest.enabled": false,
   "editor.parameterHints.enabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnEnter": "on",
   "editor.tabCompletion": "off",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
