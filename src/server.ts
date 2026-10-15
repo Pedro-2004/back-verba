@@ -1,12 +1,6 @@
-import express from 'express';
-import 'dotenv/config';
+import {app} from '@/app'
+import 'dotenv/config'
 
-const app = express();
-
-
-app.get('/', (_req, res): void => {
-  res.status(200).json({ message: 'Servidor rodando em typescript' });
-});
 
 
 
