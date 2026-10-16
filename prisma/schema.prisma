@@ -11,3 +11,35 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model User {
+  id            Int    @id @default(autoincrement())
+  full_name     String
+  email         String @unique
+  password_hash String
+
+  transactions Transaction[]
+}
+
+model Category {
+  id           Int           @id @default(autoincrement())
+  name         String
+  transactions Transaction[]
+}
+
+model Transaction {
+  id               Int             @id @default(autoincrement())
+  description      String
+  amount           Decimal         @db.Decimal(12, 2)
+  type             TransactionType
+  transaction_date DateTime
+  user_id          Int
+  user             User            @relation(fields: [user_id], references: [id])
+  category_id      Int
+  category         Category        @relation(fields: [category_id], references: [id])
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}

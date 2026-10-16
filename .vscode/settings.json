@@ -12,6 +12,10 @@
   "editor.tabCompletion": "off",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "files.trimTrailingWhitespace": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
